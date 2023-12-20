@@ -101,6 +101,10 @@ despues ya no se ejecuta
     .header .menu {
         display: inherit;
     }
+
+    .header .overlay .overlay-content a {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -164,4 +168,3 @@ de 450px si es mayor no se aplica*/
         right: 35px;
     }
 }
-
