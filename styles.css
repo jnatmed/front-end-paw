@@ -107,7 +107,6 @@ despues ya no se ejecuta
     }
 }
 
-
 /*Nav*/
 
 .header a {
@@ -167,4 +166,60 @@ de 450px si es mayor no se aplica*/
         top: 15px;
         right: 35px;
     }
+}
+
+.container-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin: 10px 10%;
+    grid-gap: 10px;
+}
+
+article {
+    padding: 10px 10px;
+}
+
+.item-notice {
+    height: auto;
+    background-color: rgb(127, 255, 133);
+    margin: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.item-notice:hover {
+    background-color: rgb(150, 127, 255);
+}
+
+.title_notice {
+    font-weight: bold;
+}
+
+.cuerpo_notice {
+    height: auto;
+}
+
+.news {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.news_left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: rgb(255, 178, 127);
+}
+
+.news_right {
+    grid-column-start: 2;
+    background-color: cornflowerblue;
+}
+
+.news_aside {
+    grid-column-start: 4;
+    background-color: #ffbc0e;
 }
