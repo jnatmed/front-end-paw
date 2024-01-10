@@ -86,27 +86,6 @@ header {
     display: none;
 }
 
-/* el bloque se ejecuta si la pantalla tiene un maximo de 450px
-despues ya no se ejecuta
-*/
-@media screen and (max-width: 890px) {
-
-    /* hace desaparecer el .btn*/
-    .nav-links,
-    .btn {
-        display: none;
-    }
-
-    /*hacer aparecer el .menu*/
-    .header .menu {
-        display: inherit;
-    }
-
-    .header .overlay .overlay-content a {
-        font-size: 1.5rem;
-    }
-}
-
 /*Nav*/
 
 .header a {
@@ -169,11 +148,9 @@ de 450px si es mayor no se aplica*/
 }
 
 .container-news {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     margin: 10px 10%;
-    grid-gap: 10px;
 }
 
 article {
@@ -185,6 +162,7 @@ article {
     background-color: rgb(127, 255, 133);
     margin: 10px;
     border-bottom: 2px solid #000;
+    border-radius: 5px;
 }
 
 .item-notice:hover {
@@ -200,26 +178,67 @@ article {
 }
 
 .news {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
 }
 
 .news_left {
-    grid-column-start: 1;
-    grid-column-end: 2;
     background-color: rgb(255, 178, 127);
+    border-radius: 5px;
 }
 
 .news_right {
-    grid-column-start: 2;
     background-color: cornflowerblue;
+    border-radius: 5px;
 }
 
 .news_aside {
-    grid-column-start: 4;
     background-color: #ffbc0e;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.news_aside .button_aside {
+    background-color: #0ecfff;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* el bloque se ejecuta si la pantalla tiene un maximo de 450px
+despues ya no se ejecuta
+*/
+@media screen and (min-width: 890px) {
+
+    /* hace desaparecer el .btn*/
+    .nav-links,
+    .btn {
+        display: none;
+    }
+
+    /*hacer aparecer el .menu*/
+    .header .menu {
+        display: inherit;
+    }
+
+    .header .overlay .overlay-content a {
+        font-size: 1.5rem;
+    }
+
+    .container-news {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        column-gap: 10px;
+    }
+
+    .news {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .news_aside {}
+
 }
