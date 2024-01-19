@@ -214,6 +214,10 @@ article {
     margin-bottom: 5px;
 }
 
+.news_aside .item-notice:hover {
+    background-color: rgb(150, 127, 255);
+}
+
 .news_aside .item-notice .title_notice {
     text-align: center;
 }
