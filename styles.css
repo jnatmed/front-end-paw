@@ -145,11 +145,16 @@ de 450px si es mayor no se aplica*/
         top: 15px;
         right: 35px;
     }
+
+    .news_aside {
+        width: 100%;
+    }
 }
 
 .container-news {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 10px;
     margin: 10px 10%;
 }
 
@@ -180,37 +185,49 @@ article {
 .news {
     display: flex;
     flex-wrap: wrap;
-    height: auto;
-
+    /* height: auto; */
 }
 
 .news_left {
     background-color: rgb(255, 178, 127);
     border-radius: 5px;
+    width: 100%;
 }
 
 .news_right {
     background-color: cornflowerblue;
     border-radius: 5px;
+    width: 100%;
 }
 
 .news_aside {
     background-color: #ffbc0e;
     border-radius: 5px;
-    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.news_aside .button_aside {
+.news_aside .item-notice {
     background-color: #0ecfff;
-    width: 100%;
+    width: auto;
     border-radius: 5px;
     margin-bottom: 5px;
 }
 
-/* el bloque se ejecuta si la pantalla tiene un maximo de 450px
-despues ya no se ejecuta
+.news_aside .item-notice .title_notice {
+    text-align: center;
+}
+
+.news_aside {
+    width: 100%;
+    margin-top: 0;
+}
+
+
+/* el bloque se ejecuta si la pantalla tiene un ancho de 890px o menos 
+de lo contrario se ejecuta las reglas por defecto
 */
-@media screen and (min-width: 890px) {
+@media screen and (max-width: 890px) {
 
     /* hace desaparecer el .btn*/
     .nav-links,
@@ -227,18 +244,47 @@ despues ya no se ejecuta
         font-size: 1.5rem;
     }
 
-    .container-news {
+    /* .container-news {
         display: grid;
         grid-template-columns: 80% 20%;
         column-gap: 10px;
+    } */
+    .container-news {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 10%;
     }
 
+    /* .news {
+        display: flex;
+        flex-wrap: wrap;
+    } */
     .news {
         display: flex;
         flex-wrap: wrap;
-
+        height: auto;
     }
 
-    .news_aside {}
+    /* .news_aside {
+        width: 100%;
+        margin-top: 0;
+    } */
+    .news_aside {
+        background-color: #ffbc0e;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .news_aside .item-notice {
+        background-color: #0ecfff;
+        width: auto;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .news_aside .item-notice .title_notice {
+        text-align: center;
+    }
 
 }
