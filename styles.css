@@ -154,8 +154,8 @@ de 450px si es mayor no se aplica*/
 .container-news {
     display: grid;
     grid-template-columns: 80% 20%;
-    column-gap: 10px;
-    margin: 10px 10%;
+    column-gap: 5px;
+    margin: 10px 2%;
 }
 
 article {
@@ -184,27 +184,26 @@ article {
 
 .news {
     display: flex;
-    flex-wrap: wrap;
-    /* height: auto; */
+    flex-wrap:nowrap;
 }
 
 .news_left {
     background-color: rgb(255, 178, 127);
     border-radius: 5px;
-    width: 100%;
+    width: 70%;
 }
 
 .news_right {
     background-color: cornflowerblue;
     border-radius: 5px;
-    width: 100%;
+    width: 30%;
+    margin-left: 5px;
 }
 
 .news_aside {
     background-color: #ffbc0e;
     border-radius: 5px;
     width: 100%;
-    margin-top: 10px;
 }
 
 .news_aside .item-notice {
@@ -222,11 +221,10 @@ article {
     text-align: center;
 }
 
-.news_aside {
-    width: 100%;
-    margin-top: 0;
+.news .news_left .title_notice {
+    padding-left: 10px;
+    padding-top: 10px;    
 }
-
 
 /* el bloque se ejecuta si la pantalla tiene un ancho de 890px o menos 
 de lo contrario se ejecuta las reglas por defecto
@@ -248,36 +246,35 @@ de lo contrario se ejecuta las reglas por defecto
         font-size: 1.5rem;
     }
 
-    /* .container-news {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        column-gap: 10px;
-    } */
     .container-news {
         display: flex;
         flex-wrap: wrap;
-        margin: 10px 10%;
     }
 
-    /* .news {
-        display: flex;
-        flex-wrap: wrap;
-    } */
     .news {
         display: flex;
         flex-wrap: wrap;
         height: auto;
     }
-
-    /* .news_aside {
+ 
+    .news_left {
+        background-color: rgb(255, 178, 127);
+        border-radius: 5px;
         width: 100%;
-        margin-top: 0;
-    } */
+    }
+    
+    .news_right {
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 5px;
+    }
+ 
     .news_aside {
         background-color: #ffbc0e;
         border-radius: 5px;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     
     .news_aside .item-notice {
