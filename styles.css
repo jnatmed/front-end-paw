@@ -135,7 +135,7 @@ header {
 
 /*se aplica si la pantalla es de un maximo de altura 
 de 450px si es mayor no se aplica*/
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
     .header .overlay a {
         font-size: 20px;
     }
@@ -149,6 +149,47 @@ de 450px si es mayor no se aplica*/
     .news_aside {
         width: 100%;
     }
+} */
+
+.carrousel {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+
+}
+.carrousel > img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .8s ease;
+}
+.carrousel > img:hover {
+    cursor: pointer;
+    width: 20%;
+    height: auto;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+.nav-links > li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links > li > a {
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    visibility: hidden;
+}
+
+.nav-links li:hover .submenu {
+    visibility: visible;
 }
 
 .container-news {
@@ -156,6 +197,7 @@ de 450px si es mayor no se aplica*/
     grid-template-columns: 80% 20%;
     column-gap: 5px;
     margin: 10px 2%;
+    /* height: 100%; */
 }
 
 article {
@@ -191,6 +233,7 @@ article {
     background-color: rgb(255, 178, 127);
     border-radius: 5px;
     width: 70%;
+    /* height: 100vh; */
 }
 
 .news_right {
@@ -221,10 +264,39 @@ article {
     text-align: center;
 }
 
-.news .news_left .title_notice {
+.news > .news_left > .title_notice {
     padding-left: 10px;
     padding-top: 10px;    
 }
+
+.categoria {
+    position: relative;
+    display: flex-wrap;
+    align-items: center;
+    justify-content: center;    
+}
+
+.categoria > img {
+    width: 100%;
+}
+
+.title_categoria {
+    position: absolute;
+    background-color: rgba(36, 131, 112, 0.5);
+    bottom: 17px;
+    left: 10px;
+    width: 95%;
+    height: 23%;
+    padding-top: 20px;
+    align-self:center;
+    text-align: center;
+}
+
+.title_categoria:hover {
+    height: 0;
+    transition: 0.8s ease-in-out;
+}
+
 
 /* el bloque se ejecuta si la pantalla tiene un ancho de 890px o menos 
 de lo contrario se ejecuta las reglas por defecto
